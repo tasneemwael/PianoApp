@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
+import 'package:untitled/Widgets/black_key.dart';
+
+import '../Widgets/white_key.dart';
 
 class PianoScreen extends StatelessWidget {
   PianoScreen({super.key});
@@ -71,33 +74,4 @@ class PianoScreen extends StatelessWidget {
     'si-80238',
     'tired-ghosts-piano-65013',
   ];
-  Widget buildWhiteKey() {
-    return Container(
-      height: 400,
-      width: 100,
-      decoration: BoxDecoration(
-        color: Colors.white,
-        border: Border.all(color: Colors.black, width: 5),
-        borderRadius: const BorderRadius.only(
-          bottomRight: Radius.circular(8),
-          bottomLeft: Radius.circular(8),
-        ),
-      ),
-    );
-  }
-
-  Widget buildBlackKey() {
-    return Container(
-      height: 250,
-      width: 60,
-      margin: const EdgeInsets.only(left: 10, right: 10),
-      decoration: const BoxDecoration(
-        color: Colors.black,
-        borderRadius: BorderRadius.only(
-          bottomRight: Radius.circular(5),
-          bottomLeft: Radius.circular(5),
-        ),
-      ),
-    );
-  }
 }
